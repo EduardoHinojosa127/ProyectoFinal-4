@@ -9,7 +9,7 @@ export default function DetalleAlmacen() {
   const cookies = new Cookies()
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/almacen/" + params.id)
+      .get("http://192.168.187.226:8000/api/almacen/" + params.id)
       .then((res) => {
         setAlmacen(res.data);
       });

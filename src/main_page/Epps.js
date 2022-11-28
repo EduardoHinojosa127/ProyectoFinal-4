@@ -15,7 +15,7 @@ export class Epps extends Component {
     };
   }
   componentDidMount() {
-    axios.get("http://localhost:8000/api/epps").then((res) => {
+    axios.get("http://192.168.187.226:8000/api/epps").then((res) => {
       console.log(res.data);
       this.setState({ epps: res.data });
     });

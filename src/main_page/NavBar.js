@@ -21,7 +21,7 @@ export class NavBar extends Component {
       >
         <div className="container px-4 px-lg-5">
           
-          <Link to={'/edit/'+cookies.get("id")}>
+          <Link className="text-black" to={'/edit/'+cookies.get("id")}>
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png"
               alt="..."
@@ -45,14 +45,19 @@ export class NavBar extends Component {
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
+            < li class="nav-item">
+                <a class="nav-link" href="#page-top">
+                  Inicio
+                </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">
-                  About
+                  Sobre el proyecto
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#projects">
-                  Projects
+                  EPPS
                 </a>
               </li>
               <li class="nav-item">
@@ -62,7 +67,7 @@ export class NavBar extends Component {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#signup">
-                  Contact
+                  Contactanos
                 </a>
               </li>
             </ul>

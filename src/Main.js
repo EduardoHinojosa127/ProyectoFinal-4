@@ -19,13 +19,12 @@ export default function Main() {
             
             <div class="d-flex justify-content-center">
               <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1>
+                <h1 class="mx-auto my-0 text-uppercase">COT</h1>
                 <h2 class="text-white-50 mx-auto mt-2 mb-5">
-                  A free, responsive, one Bootstrap theme created by Start
-                  Bootstrap.
+                  Contoller Tempertature Optimized
                 </h2>
                 <a class="btn btn-primary" href="#about">
-                  Get Started
+                  Comencemos
                 </a>
               </div>
             </div>
@@ -35,20 +34,17 @@ export default function Main() {
           <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
               <div class="col-lg-8">
-                <h2 class="text-white mb-4">Built with Bootstrap 5</h2>
+                <h2 class="text-white mb-4">Sobre el proyecto</h2>
                 <p class="text-white-50">
-                  Grayscale is a free Bootstrap theme created by Start
-                  Bootstrap. It can be yours right now, simply download the
-                  template on
-                  <a href="https://startbootstrap.com/theme/grayscale/">
-                    the preview page.
-                  </a>
-                  The theme is open source, and you can use it for any purpose,
-                  personal or commercial.
+                  Nuestro proyecto desarrollado es el resultado del interes nacional y necesidad publica la seguridad
+                  alimentaria y nutricional de la poblacion en el sector minero.
+                  La propuesta del proyecto contiene la visión, los objetivos y las estrategias, con la finalidad de garantizar la 
+                  seguridad alimentaria y nutricional, nos enfocamos en entender, controlar y comunicar las precauciones que se tienen con respecto
+                  a los alimentos almacenados.
                 </p>
               </div>
             </div>
-            <img class="img-fluid" src="assets/img/ipad.png" alt="..." />
+            <img class="img-fluid" src="https://tecnologiaparalaindustria.com/wp-content/uploads/2020/09/Gestion-de-la-seguridad-electrica-en-las-minas.png" alt="..." />
           </div>
         </section>
         <Epps />

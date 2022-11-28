@@ -19,8 +19,7 @@ export default class Register extends Component {
       estado: "A",
       sexo: "",
       direccion: "",
-      telefono:"",
-      cargo_id:1
+      telefono:""
     })
     this.cambioNombre = this.cambioNombre.bind(this);
     this.cambioApellidos = this.cambioApellidos.bind(this);
@@ -74,15 +73,14 @@ export default class Register extends Component {
         nombre: this.state.nombre,
         apellidos: this.state.apellidos,
         email: this.state.email,
-        clave: this.state.password,
+        clave: this.state.clave,
         estado: this.state.estado,
         sexo: this.state.sexo,
         direccion: this.state.direccion,
-        telefono: this.state.telefono,
-        cargo_id: this.state.cargo_id
+        telefono: this.state.telefono
     }
     var valorNuevo= {...this.state}
-    axios.post('http://localhost:8000/api/usuarios',valorNuevo)
+    axios.post('http://192.168.187.226:8000/api/usuarios',valorNuevo)
       .then(res => {
         console.log("Correcto")
         swal({
@@ -116,9 +114,9 @@ export default class Register extends Component {
         <Form id="sign-in-form" className="text-center p-3 w-100">
           <img
             className="mb-4 bootstrap-logo"
-            src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+            src="https://images.squarespace-cdn.com/content/v1/5ed981494bfad460e4eeeae1/1591331946167-DMN2T43QG9AJCRUB039L/TECSUP+Logo.png"
             alt="Bootstrap 5"
-            height={50}
+            height={100}
           />
           <h1 className="mb-3 fs-3 fw-normal">Página de Registro</h1>
           <Form.Group>

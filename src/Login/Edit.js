@@ -23,7 +23,6 @@ export default class Edit extends Component {
       sexo: "",
       direccion: "",
       telefono: "",
-      cargo_id: 1,
     };
     this.cambioNombre = this.cambioNombre.bind(this);
     this.cambioApellidos = this.cambioApellidos.bind(this);
@@ -74,7 +73,7 @@ export default class Edit extends Component {
   componentDidMount() {
     axios
       .get(
-        "http://localhost:8000/api/usuario/" +
+        "http://192.168.187.226:8000/api/usuario/" +
           cookies.get("nombre") +
           "/" +
           cookies.get("clave")
@@ -90,7 +89,6 @@ export default class Edit extends Component {
           sexo: res.data.sexo,
           direccion: res.data.direccion,
           telefono: res.data.telefono,
-          cargo_id: res.data.cargo_id,
         });
       });
       if (!cookies.get("nombre")) {
@@ -126,11 +124,10 @@ export default class Edit extends Component {
       sexo: this.state.sexo,
       direccion: this.state.direccion,
       telefono: this.state.telefono,
-      cargo_id: this.state.cargo_id,
     };
     axios
       .put(
-        "http://localhost:8000/api/usuario/" +
+        "http://192.168.187.226:8000/api/usuario/" +
           cookies.get("nombre") +
           "/" +
           cookies.get("clave"),
@@ -147,7 +144,6 @@ export default class Edit extends Component {
           sexo: res.data.sexo,
           direccion: res.data.direccion,
           telefono: res.data.telefono,
-          cargo_id: res.data.cargo_id,
         });
         cookies.set("clave", res.data.clave, { path: "/" });
         cookies.set("nombre", res.data.nombre, { path: "/" });
@@ -178,13 +174,13 @@ export default class Edit extends Component {
             id="mainNav"
           >
             <div class="container px-4 px-lg-5">
-              <Link className="navbar-brand" to="/">
+              <Link className="text-light" to="/">
                 Volver a Página de Inicio
               </Link>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <button class="btn btn-danger" onClick={this.cerrarSesion}>
+                    <button class="btn text-light" onClick={this.cerrarSesion}>
                       Cerrar Sesión
                     </button>
                   </li>
@@ -197,11 +193,11 @@ export default class Edit extends Component {
           <Form id="sign-in-form" className="text-center p-3 w-100 mt-5">
             <img
               className="mb-4 bootstrap-logo"
-              src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+              src="https://images.squarespace-cdn.com/content/v1/5ed981494bfad460e4eeeae1/1591331946167-DMN2T43QG9AJCRUB039L/TECSUP+Logo.png"
               alt="Bootstrap 5"
-              height={50}
+              height={100}
             />
-            <h1 className="mb-3 fs-3 fw-normal">Página de Registro</h1>
+            <h1 className="mb-3 fs-3 fw-normal">Editar Usuario</h1>
             <Form.Group>
               <label class="form-label m-3">Usuario</label>
               <Form.Control

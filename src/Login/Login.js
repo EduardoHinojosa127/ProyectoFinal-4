@@ -28,7 +28,7 @@ export default class Login extends Component {
   iniciarSesion = async () => {
     await axios
       .get(
-        "http://localhost:8000/api/usuario/" +
+        "http://192.168.187.226:8000/api/usuario/" +
           this.state.form.username +
           "/" +
           this.state.form.password
@@ -77,7 +77,7 @@ export default class Login extends Component {
         <Form id="sign-in-form" className="text-center p-3 w-100">
           <img
             className="mb-4 bootstrap-logo"
-            src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg"
+            src="https://images.squarespace-cdn.com/content/v1/5ed981494bfad460e4eeeae1/1591331946167-DMN2T43QG9AJCRUB039L/TECSUP+Logo.png"
             alt="Bootstrap 5"
             height={150}
           />
