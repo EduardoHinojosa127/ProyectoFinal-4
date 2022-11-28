@@ -87,40 +87,6 @@ class AlmacenDetailView(APIView):
         dataAlmacen.delete()
         return Response(serAlmacen.data)
 
-class CargosView(APIView):
-    
-    def get(self,request):
-        dataCargos = Cargos.objects.all()
-        serCargos = CargosSerializer(dataCargos,many=True)
-        return Response(serCargos.data)
-    
-    def post(self,request):
-        serCargos = CargosSerializer(data=request.data)
-        serCargos.is_valid(raise_exception=True)
-        serCargos.save()
-        
-        return Response(serCargos.data)
-    
-class CargosDetailView(APIView):
-    
-    def get(self,request,cargo_id):
-        dataCargos = Cargos.objects.get(pk=cargo_id)
-        serCargos = CargosSerializer(dataCargos)
-        return Response(serCargos.data)
-    
-    def put(self,request,cargo_id):
-        dataCargos = Cargos.objects.get(pk=cargo_id)
-        serCargos = CargosSerializer(dataCargos,data=request.data)
-        serCargos.is_valid(raise_exception=True)
-        serCargos.save()
-        return Response(serCargos.data)
-    
-    def delete(self,request,cargo_id):
-        dataCargos = Cargos.objects.get(pk=cargo_id)
-        serCargos = CargosSerializer(dataCargos)
-        dataCargos.delete()
-        return Response(serCargos.data)
-
 class EPPView(APIView):
     
     def get(self,request):

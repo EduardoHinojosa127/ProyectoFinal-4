@@ -2,12 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-class Cargos(models.Model):
-    nombre_cargo = models.CharField(max_length=200)
-    estado_cargo = models.CharField(max_length=1)
-    def __str__(self):
-        return self.nombre_cargo
-
 class Usuario(models.Model):
     nombre= models.CharField(max_length=200)
     apellidos = models.CharField(max_length=200)
@@ -17,7 +11,6 @@ class Usuario(models.Model):
     sexo = models.CharField(max_length=1,default="")
     direccion = models.CharField(max_length=200,default="")
     telefono= models.CharField(max_length=10,default="")
-    cargo_id = models.ForeignKey(Cargos, on_delete=models.CASCADE, default=1)
     def __str__(self):
         return self.nombre
 
