@@ -127,7 +127,7 @@ class Detalle_almacenView(APIView):
         dataDetalle = Detalle_almacen.objects.all()
         serDetalle = Detalle_almacenSerializer(dataDetalle,many=True)
         return Response(serDetalle.data)
-    
+        
     def post(self,request):
         serDetalle = Detalle_almacenSerializer(data=request.data)
         serDetalle.is_valid(raise_exception=True)
@@ -135,12 +135,20 @@ class Detalle_almacenView(APIView):
         
         return Response(serDetalle.data)
     
+class Detalle_almacenDetailView2(APIView):
+    def get(self, request, almacen_id):
+        dataDetalle = Detalle_almacen.objects.filter(almacen_id_id=almacen_id)
+        serDetalle = Detalle_almacenSerializer(dataDetalle, many=True)
+        return Response(serDetalle.data)
+
 class Detalle_almacenDetailView(APIView):
     
     def get(self,request,detalle_id):
         dataDetalle = Detalle_almacen.objects.get(pk=detalle_id)
         serDetalle = Detalle_almacenSerializer(dataDetalle)
         return Response(serDetalle.data)
+
+    
     
     def put(self,request,detalle_id):
         dataDetalle = Detalle_almacen.objects.get(pk=detalle_id)
@@ -154,6 +162,8 @@ class Detalle_almacenDetailView(APIView):
         serDetalle = Detalle_almacenSerializer(dataDetalle)
         dataDetalle.delete()
         return Response(serDetalle.data)
+
+
 
 class DetalleTemperaturaView(APIView):
     

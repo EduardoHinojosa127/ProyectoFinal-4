@@ -73,7 +73,7 @@ export default class Edit extends Component {
   componentDidMount() {
     axios
       .get(
-        "http://192.168.187.226:8000/api/usuario/" +
+        "http://localhost:8000/api/usuario/" +
           cookies.get("nombre") +
           "/" +
           cookies.get("clave")
@@ -127,7 +127,7 @@ export default class Edit extends Component {
     };
     axios
       .put(
-        "http://192.168.187.226:8000/api/usuario/" +
+        "http://localhost:8000/api/usuario/" +
           cookies.get("nombre") +
           "/" +
           cookies.get("clave"),

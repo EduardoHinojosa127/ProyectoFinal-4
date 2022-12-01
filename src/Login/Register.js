@@ -80,7 +80,7 @@ export default class Register extends Component {
         telefono: this.state.telefono
     }
     var valorNuevo= {...this.state}
-    axios.post('http://192.168.187.226:8000/api/usuarios',valorNuevo)
+    axios.post('http://localhost:8000/api/usuarios',valorNuevo)
       .then(res => {
         console.log("Correcto")
         swal({
@@ -102,7 +102,7 @@ export default class Register extends Component {
           button:"Aceptar",              
         }).then(respuesta=>{
           if(respuesta){
-            window.location.href = "/register";
+            
           }
         })
       })

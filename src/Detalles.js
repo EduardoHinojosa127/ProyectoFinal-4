@@ -5,17 +5,24 @@ import Cookies from "universal-cookie";
 
 export default function DetalleAlmacen() {
   const [almacen, setAlmacen] = useState([]);
+  const [detalle, setDetalle] = useState([]);
   const params = useParams();
-  const cookies = new Cookies()
+  const cookies = new Cookies();
   useEffect(() => {
+    axios.get("http://localhost:8000/api/almacen/" + params.id).then((res) => {
+      setAlmacen(res.data);
+    });
     axios
-      .get("http://192.168.187.226:8000/api/almacen/" + params.id)
+      .get("http://localhost:8000/api/detalle2/" + params.id)
       .then((res) => {
-        setAlmacen(res.data);
+        setDetalle(res.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-      if (!cookies.get("nombre")) {
-        window.location.href = "/login";
-      }
+    if (!cookies.get("nombre")) {
+      window.location.href = "/login";
+    }
   });
 
   return (
@@ -33,10 +40,30 @@ export default function DetalleAlmacen() {
             <div class="col-lg-8">
               <h2 class="text-white mb-4 fs-1">{almacen.nombre_almacen}</h2>
               <p class="text-white-50 fs-5">{almacen.informacion}</p>
-              <p class="text-white-50 fs-1">🌡️ {almacen.temperatura} °C</p>
+              <div className="container">
+                <img
+                  src={
+                    almacen.temperatura > 10
+                      ? "https://images.emojiterra.com/google/android-10/512px/1f975.png"
+                      : "https://images.emojiterra.com/google/android-11/512px/1f976.png"
+                  }
+                  alt="..." height={100}
+                /><br/>
+                <p class="text-white-50 fs-1">🌡 {almacen.temperatura} °C</p>
+              </div>
             </div>
           </div>
           <img class="img-fluid" src={almacen.imagen} alt="..." />
+          {detalle.map((detalle, index) => {
+            return (
+              <>
+                <br />
+                <Link to={"/informe/" + detalle.id} className="text-light">
+                  Informe N° {index + 1}
+                </Link>
+              </>
+            );
+          })}
         </div>
       </section>
     </div>

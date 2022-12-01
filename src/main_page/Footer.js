@@ -9,10 +9,10 @@ export function Footer() {
               <div class="card py-4 h-100">
                 <div class="card-body text-center">
                   <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                  <h4 class="text-uppercase m-0">Address</h4>
+                  <h4 class="text-uppercase m-0">Dirección</h4>
                   <hr class="my-4 mx-auto" />
                   <div class="small text-black-50">
-                    4923 Market Street, Orlando FL
+                    TECSUP - JLByR
                   </div>
                 </div>
               </div>
@@ -33,7 +33,7 @@ export function Footer() {
               <div class="card py-4 h-100">
                 <div class="card-body text-center">
                   <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                  <h4 class="text-uppercase m-0">Phone</h4>
+                  <h4 class="text-uppercase m-0">Teléfono</h4>
                   <hr class="my-4 mx-auto" />
                   <div class="small text-black-50">+1 (555) 902-8832</div>
                 </div>
@@ -41,19 +41,19 @@ export function Footer() {
             </div>
           </div>
           <div class="social d-flex justify-content-center">
-            <a class="mx-2" href="#!">
+            <a class="mx-2" href="https://www.youtube.com/watch?v=mCdA4bJAGGk">
               <i class="fab fa-twitter"></i>
             </a>
-            <a class="mx-2" href="#!">
+            <a class="mx-2" href="https://www.youtube.com/watch?v=mCdA4bJAGGk">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a class="mx-2" href="#!">
+            <a class="mx-2" href="https://www.youtube.com/watch?v=mCdA4bJAGGk">
               <i class="fab fa-github"></i>
             </a>
           </div>
         </div>
       </section>
-      <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div></footer>
+      <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Grupo 4</div></footer>
     </>
   );
 }

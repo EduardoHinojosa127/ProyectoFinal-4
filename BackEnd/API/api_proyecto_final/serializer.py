@@ -15,7 +15,7 @@ class AlmacenSerializer(serializers.ModelSerializer):
 class EPPSerializer(serializers.ModelSerializer):
     class Meta:
         model = EPP
-        fields = ('id', 'nombre_epp','imagen','informacion_epp','almacen_id')
+        fields = ('id', 'nombre_epp','imagen','informacion_epp')
 
 class Detalle_almacenSerializer(serializers.ModelSerializer):
     class Meta:

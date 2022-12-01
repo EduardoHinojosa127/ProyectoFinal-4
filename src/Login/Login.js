@@ -28,7 +28,7 @@ export default class Login extends Component {
   iniciarSesion = async () => {
     await axios
       .get(
-        "http://192.168.187.226:8000/api/usuario/" +
+        "http://localhost:8000/api/usuario/" +
           this.state.form.username +
           "/" +
           this.state.form.password

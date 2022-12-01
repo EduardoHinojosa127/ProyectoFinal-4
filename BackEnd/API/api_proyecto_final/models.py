@@ -35,7 +35,6 @@ class EPP(models.Model):
     nombre_epp = models.CharField(max_length=200)
     imagen = models.CharField(max_length=200)
     informacion_epp = models.CharField(max_length=200)
-    almacen_id = models.ForeignKey(Almacen, on_delete=models.CASCADE)
     def __str__(self):
         return self.nombre_epp
 

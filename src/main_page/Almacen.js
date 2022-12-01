@@ -16,7 +16,7 @@ export class Almacen extends Component {
     };
   }
   componentDidMount() {
-    axios.get("http://192.168.187.226:8000/api/almacenes").then((res) => {
+    axios.get("http://localhost:8000/api/almacenes").then((res) => {
       console.log(res.data);
       this.setState({ almacenes: res.data });
       console.log(this.almacenes);

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import DetalleAlmacen from "./Detalles";
+import { Informe } from "./Informe";
 import Edit from "./Login/Edit";
 import Login from "./Login/Login";
 import Register from "./Login/Register";
@@ -12,6 +13,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/detalles/:id" element={<DetalleAlmacen />} />
+        <Route path="/informe/:id" element={<Informe />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
